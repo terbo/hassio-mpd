@@ -1,0 +1,2 @@
+#!/bin/bash
+su vlc -- /bin/play-youtube "$@" &

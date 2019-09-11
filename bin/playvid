@@ -1,0 +1,2 @@
+#!/bin/bash
+su vlc -- /usr/bin/cvlc -q --vout vdummy --novideo --alsa-audio-device sysdefault:CARD=Audio "$@" &
