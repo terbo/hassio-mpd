@@ -1,1 +1,29 @@
-config.json.dev
+{
+  "name": "MPD",
+  "version": "1.9999",
+  "slug": "mpd",
+  "description": "Local MPD Server",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "startup": "services",
+  "boot": "auto",
+  "options": {},
+  "schema": {},
+  "webui": "http://[HOST]:[PORT:8080]/",
+  "full_access": true,
+	"apparmor": false,
+	"audio": true,
+  "full_access": true,
+  "ports": {
+    "6600/tcp": 6600,
+    "8080/tcp": 8080,
+    "2222/tcp": 2222,
+    "44100/tcp": 44100
+  },
+  "privileged": [
+    "NET_ADMIN",
+    "SYS_ADMIN",
+    "SYS_RAWIO",
+    "SYS_TIME",
+    "SYS_NICE"
+  ]
+}

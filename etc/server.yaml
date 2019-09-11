@@ -1,1 +1,32 @@
-server.yaml.user
+mqtt:
+  host: 127.0.0.1
+  port: 1883
+  keepalive: 60
+  qos: 0
+  retain: False
+  status: tts/status
+  topics:
+    - tts/#
+    - vlc/play/#
+    - vlc/stop/#
+    - mpd/cmd/#
+    - sms/in#
+
+vlc:
+  args: ''
+
+aplay:
+  args: ''
+
+mpd:
+  host: 127.0.0.1
+  port: 6600
+  timeout: 2
+  reduce: .40
+
+espeak:
+  a: 40                # amplitude, 0-200, default 100
+  v: en-westindies     # voice
+  p: 70
+  g: 3                 # wordgap in ms
+  s: 180               # speed in words per minute, 80-450, default 175
